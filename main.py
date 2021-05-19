@@ -6,6 +6,7 @@ from time import sleep
 
 import requests
 
+PIN_CODE = 424304
 
 def get_appointment_sessions_data(pin_code):
     """
@@ -53,7 +54,7 @@ def appointment_sessions(PIN_CODE):
 
 
 if __name__ == "__main__":
-    PIN_CODE = 424304
+
 
     aval = True
     while aval != False:
