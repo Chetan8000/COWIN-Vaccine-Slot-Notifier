@@ -44,12 +44,8 @@ def appointment_sessions(PIN_CODE):
 
                         duration = 1  # seconds
                         freq = 440  # Hz
-                        try:
-                            os.system('play -nq -t alsa synth {} sine {}'.format(duration, freq))
-                        except:
-                            os.system("sudo apt install sox -y")
-                        finally:
-                            os.system('play -nq -t alsa synth {} sine {}'.format(duration, freq))
+                        os.system('play -nq -t alsa synth {} sine {}'.format(duration, freq))
+                     
                         break
 
 
@@ -59,7 +55,6 @@ if __name__ == "__main__":
     aval = True
     while aval != False:
         appointment_sessions(PIN_CODE)
-
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
         print("On Time =", current_time)
